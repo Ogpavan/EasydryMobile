@@ -1,0 +1,314 @@
+/* Color has a role: blue = action, teal = care/credit, gold = value, violet = special care. */
+.desktop-stage {
+  background: #f0f1f3;
+}
+.eyebrow {
+  color: var(--neutral-foreground);
+}
+.panel,
+.service-card,
+.coupon-card,
+.faq-list {
+  border-color: var(--border);
+}
+.small-icon {
+  background: var(--neutral-soft);
+  color: var(--neutral-foreground);
+}
+.info-note,
+.info-note svg {
+  color: var(--neutral-foreground);
+}
+.hero-banner {
+  background: linear-gradient(115deg, var(--primary-dark), var(--primary));
+}
+.hero-label {
+  color: #ddebff;
+}
+.trust-strip svg {
+  color: var(--teal);
+}
+
+/* Quiet, related tints separate services without changing primary selection behavior. */
+[data-service="fold"],
+[data-service="scooter"] {
+  --service-surface: var(--teal-soft);
+  --service-foreground: var(--teal);
+}
+[data-service="iron"] {
+  --service-surface: #eef3fb;
+  --service-foreground: var(--primary);
+}
+[data-service="dry"] {
+  --service-surface: var(--violet-soft);
+  --service-foreground: var(--violet);
+}
+[data-service="shoe"] {
+  --service-surface: var(--gold-soft);
+  --service-foreground: var(--gold);
+}
+.service-art,
+.service-card.selected .service-art,
+.order-art {
+  background: var(--service-surface, var(--neutral-soft));
+}
+.service-arrow {
+  color: var(--service-foreground, var(--neutral-foreground));
+}
+.service-card.selected {
+  background: var(--surface) !important;
+}
+.service-card.selected .service-copy h3 {
+  color: var(--primary);
+}
+.service-card:not(.selected):hover {
+  border-color: var(--service-foreground, var(--border));
+}
+
+/* Home value modules are warm and light, giving the blue hero room to lead. */
+.package-promo {
+  background: var(--warm-soft);
+  border-color: var(--warm-border);
+}
+.package-promo .eyebrow {
+  color: var(--gold);
+}
+.offer-strip {
+  background: var(--surface);
+  border-color: var(--gold-border);
+}
+.offer-strip .small-icon {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+.offer-strip > svg {
+  color: var(--gold);
+}
+.home-bottom-links a {
+  color: var(--neutral-foreground);
+}
+.home-footer .brand {
+  opacity: 0.8;
+}
+.address-actions .MuiButton-root:first-child {
+  background: var(--neutral-soft);
+}
+
+/* Gold is reserved for offers and express attention, never primary navigation. */
+.express-option {
+  background: #fffcf5;
+  border-color: var(--gold-border);
+}
+.express-option .small-icon {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+.express-option strong {
+  color: #624c29;
+}
+.offers-hero {
+  background: #f6e9d2;
+  color: var(--text);
+  border: 1px solid var(--gold-border);
+}
+.offers-hero > span,
+.offers-hero p {
+  color: #755a31;
+}
+.offers-hero h1 {
+  color: #3d3326;
+}
+.offers-hero button {
+  color: #674a1a;
+  background: #ffffff80;
+  border-color: #b8975e;
+}
+.offer-hero-icon {
+  color: #9a6c2524;
+}
+.coupon-stub {
+  color: var(--gold);
+  background: var(--gold-soft);
+  border-color: var(--gold-border);
+}
+.coupon-code {
+  color: #6f5125;
+}
+.coupon-card.applied {
+  border-color: var(--teal-border);
+}
+.coupon-card.applied .coupon-stub {
+  background: var(--teal-soft);
+  color: var(--teal);
+  border-color: var(--teal-border);
+}
+.coupon-card.applied .MuiButton-root {
+  color: var(--success);
+}
+.coupon-card.expired {
+  opacity: 1;
+}
+.coupon-card.expired .coupon-stub {
+  background: var(--neutral-soft);
+  color: var(--neutral-foreground);
+  border-color: var(--border);
+}
+.coupon-card.expired h3,
+.coupon-card.expired .coupon-code {
+  color: var(--secondary);
+}
+
+/* Prepaid credit gets a deeper, calmer surface; savings stay gold. */
+.plans-hero {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.plans-hero h2 {
+  color: #ffffff;
+}
+.plans-hero .eyebrow {
+  color: var(--gold-highlight);
+}
+.plans-hero p {
+  color: #d1dde8;
+}
+.balance-card {
+  background: var(--teal-deep);
+}
+.balance-card .row > span,
+.balance-card p {
+  color: #d4e8df;
+}
+.balance-card .row > svg {
+  color: var(--gold-highlight);
+}
+.package-card.recommended {
+  border-color: #9cbeae;
+}
+.package-card.recommended > .row .eyebrow {
+  color: var(--teal);
+}
+.package-card .bonus-chip {
+  background: var(--gold-soft);
+  color: var(--gold);
+  border-color: var(--gold-border);
+}
+.check-list svg {
+  color: var(--teal);
+}
+.wallet-entry {
+  background: var(--teal-soft);
+  border-color: var(--teal-border);
+}
+.wallet-entry > svg {
+  color: var(--teal);
+}
+.coupon-entry {
+  background: #fffcf7;
+  border-color: var(--gold-border);
+  color: var(--gold);
+}
+
+/* State colors remain consistent between the invoice and tracking timeline. */
+.order-timeline {
+  --stage-foreground: var(--primary);
+  --stage-surface: var(--selected);
+}
+.order-timeline[data-stage="processing"] {
+  --stage-foreground: var(--gold);
+  --stage-surface: var(--gold-soft);
+}
+.order-timeline[data-stage="ready"] {
+  --stage-foreground: var(--teal);
+  --stage-surface: var(--teal-soft);
+}
+.order-timeline[data-stage="out"] {
+  --stage-foreground: var(--violet);
+  --stage-surface: var(--violet-soft);
+}
+.order-timeline[data-stage="delivered"] {
+  --stage-foreground: var(--success);
+  --stage-surface: var(--success-soft);
+}
+.order-timeline li.current .timeline-dot {
+  color: var(--stage-foreground);
+  background: var(--stage-surface);
+  border-color: var(--stage-foreground);
+  box-shadow: 0 0 0 4px var(--surface);
+}
+.timeline-current {
+  color: var(--stage-foreground);
+}
+.tracking-link {
+  background: var(--warm-soft);
+  border-color: var(--warm-border);
+}
+.tracking-link .small-icon {
+  color: var(--teal);
+  background: var(--teal-soft);
+}
+.tracking-link > svg {
+  color: var(--neutral-foreground);
+}
+.demo-panel {
+  background: var(--neutral-soft);
+  border-color: #c8d0d9;
+}
+.reference-copy {
+  background: var(--success-soft);
+  border-color: var(--teal-border);
+  color: var(--teal);
+}
+.confirmation-details svg {
+  color: var(--teal);
+}
+.rating-panel {
+  border-color: var(--gold-border);
+  background: #fffcf7;
+}
+
+/* Account and support use neutrals, with contextual accents only where useful. */
+.menu-icon,
+.menu-list > button > svg:first-child,
+.menu-list > a > svg:first-child {
+  color: var(--neutral-foreground);
+}
+.menu-list a[href="/packages"] .menu-icon {
+  color: var(--teal);
+}
+.menu-list a[href="/offers"] .menu-icon {
+  color: var(--gold);
+}
+.avatar {
+  background: var(--warm-soft);
+  color: var(--gold);
+}
+.support-symbol,
+.auth-symbol {
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-color: var(--teal-border);
+}
+.support-options svg {
+  color: var(--teal);
+}
+.settings-list > div > svg {
+  color: var(--neutral-foreground);
+}
+.empty-icon {
+  color: var(--neutral-foreground);
+  background: var(--neutral-soft);
+}
+.onboarding-art .art-orbit {
+  background: var(--service-surface, var(--warm-soft));
+}
+.floating-badge > svg:first-child {
+  color: var(--service-foreground, var(--teal));
+}
+.splash {
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    var(--warm-soft),
+    var(--bg) 70%
+  );
+}
